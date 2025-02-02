@@ -1,4 +1,5 @@
 local FPS = 60
+
 local TimeFrame = 0
 
 local LastFrame = tick()
@@ -23,7 +24,11 @@ function swait(dur)
 	end
 end
 
--- client sided mcdonald
+-- converter by Drahazar
+
+--created by helkern
+--some things might be taken from other scripts
+
 Player = game:GetService("Players").LocalPlayer
 PlayerGui = Player.PlayerGui
 Cam = workspace.CurrentCamera
@@ -32,6 +37,9 @@ local Character = Player.Character
 Humanoid = Character.Humanoid
 Mouse = Player:GetMouse()
 RootPart = Character["HumanoidRootPart"]
+if not Character:FindFirstChild("Torso") then
+	Player:Kick("\nR15 Not Supported !\n[Client Sided MCDonalds Script]")
+end
 Torso = Character["Torso"]
 Head = Character["Head"]
 RightArm = Character["Right Arm"]
@@ -45,6 +53,7 @@ LeftShoulder = Torso["Left Shoulder"]
 RightHip = Torso["Right Hip"]
 LeftHip = Torso["Left Hip"]
 local sick = Instance.new("Sound",Torso)
+
 if Character:FindFirstChildOfClass("ShirtGraphic") then
 	Character:FindFirstChild("Shirt Graphic"):Destroy()
 end
@@ -67,7 +76,7 @@ MRANDOM = math.random
 FLOOR = math.floor
 
 Animation_Speed = 3
-Frame_Speed = 1 / 60
+Frame_Speed = 1 / 60 -- (1 / 30) OR (1 / 60)
 local Speed = 12
 local ROOTC0 = CF(0, 0, 0) * ANGLES(RAD(-90), RAD(0), RAD(180))
 local NECKC0 = CF(0, 1, 0) * ANGLES(RAD(-90), RAD(0), RAD(180))
@@ -91,6 +100,8 @@ local ANIMATOR = Humanoid.Animator
 local ANIMATE = Character.Animate
 ANIMATOR:Destroy()
 local UNANCHOR = true
+local HITPLAYERSOUNDS = {--[["199149137", "199149186", "199149221", "199149235", "199149269", "199149297"--]]"263032172", "263032182", "263032200", "263032221", "263032252", "263033191"}	
+
 
 frame = Frame_Speed
 tf = 0
